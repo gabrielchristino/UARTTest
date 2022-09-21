@@ -1,0 +1,16 @@
+<html>
+ <head>
+ </head>
+ <body>
+  <script src="https://www.espruino.com/js/uart.js"></script>
+  <script>
+  function consoleLog() {
+    UART.eval('console.log(\"teste\")', function(t) {
+      document.getElementById("result").innerHTML = t;
+    });
+  }
+  </script>
+  <button onclick="consoleLog()">Console log</button>
+  <span id="result"></span>
+ </body>
+</html>
