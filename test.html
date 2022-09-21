@@ -5,7 +5,7 @@
   <script src="https://www.espruino.com/js/uart.js"></script>
   <script>
   function consoleLog() {
-      UART.eval(`
+      UART.write(`
       D4.set();
       var spi = new SPI();
       spi.setup({mosi:D19 /* sda */, sck:D18 /* scl */ , baud:40000000});
@@ -14,9 +14,7 @@
       g.setFontVector(20);
       g.setColor(0,0.5,1);
       g.drawString("Espruino",0,10);
-      `, function(d) {
-        alert(d);
-      });
+      `);
   }
   </script>
   <button onclick="consoleLog()">Console log</button>
