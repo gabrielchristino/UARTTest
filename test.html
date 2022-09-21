@@ -5,13 +5,13 @@
   <script src="https://www.espruino.com/js/uart.js"></script>
   <script>
   function consoleLog() {
-    UART.write("D4.set()\n")
-    UART.write("var spi = new SPI()\n")
-    UART.write("spi.setup({mosi:D19 /* sda */, sck:D18 /* scl */})\n")
-    UART.write("var g = require('ST7789').connect(spi, D16 /* DC */, D5 /* CE */, D23 /* RST */, function() {})\n")
-    UART.write("g.setFontVector(20)\n")
-    UART.write("g.setColor(50,200,200)\n")
-    UART.write("g.drawString('Espruino',0,10)\n")
+    UART.write("D4.set()\n");
+    UART.write("var spi = new SPI()\n");
+    UART.write("spi.setup({mosi:D19 /* sda */, sck:D18 /* scl */})\n");
+    UART.write("var g = require('ST7789').connect(spi, D16 /* DC */, D5 /* CE */, D23 /* RST */, function() {})\n");
+    UART.write("g.setFontVector(20)\n");
+    UART.write("g.setColor(50,200,200)\n");
+    UART.write("g.drawString('Espruino',0,10)\n");
   }
   </script>
   <button onclick="consoleLog()">Console log</button>
