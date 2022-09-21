@@ -5,7 +5,7 @@
   <script src="https://www.espruino.com/js/uart.js"></script>
   <script>
   function consoleLog() {
-    UART.write("D4.set() // LCD backlight on");
+    UART.write("D4.set()\n")
     UART.write("var spi = new SPI()");
     UART.write("spi.setup({mosi:D19 /* sda */, sck:D18 /* scl */})");
     UART.write("var g = require('ST7789').connect(spi, D16 /* DC */, D5 /* CE */, D23 /* RST */, function() {})");
