@@ -5,7 +5,7 @@
   <script src="https://www.espruino.com/js/uart.js"></script>
   <script>
   function consoleLog() {
-    UART.write("1+2\n", function(d) {
+    UART.write("D4.set();", function(d) {
       alert(d);
     });
   }
