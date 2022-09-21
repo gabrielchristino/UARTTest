@@ -5,7 +5,7 @@
   <script src="https://www.espruino.com/js/uart.js"></script>
   <script>
   function consoleLog() {
-    UART.eval('console.log("teste")', function(t) {
+    UART.eval("console.log('teste')", function(t) {
       document.getElementById("result").innerHTML = t;
     });
   }
